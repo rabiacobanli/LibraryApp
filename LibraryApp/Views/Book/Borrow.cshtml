@@ -1,0 +1,38 @@
+﻿@model Lib.Models.BorrowedBook
+
+<form method="post">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Ödünç Alma Ekranı</h2>
+            <hr />
+        </div>
+        <div class="mb-3 row p-1">
+            <label asp-for="FirstName" class="p-0"></label>
+            <input asp-for="FirstName" class="form-control" />
+            <span asp-validation-for="FirstName" class="text-danger"></span>
+        </div>
+        <div class="mb-3 row p-1">
+            <label asp-for="LastName" class="p-0"></label>
+            <input asp-for="LastName" class="form-control" />
+            <span asp-validation-for="LastName" class="text-danger"></span>
+
+        </div>
+        <div class="mb-3 row p-1">
+            <label asp-for="ReturnDate" class="p-0"></label>
+            <input asp-for="ReturnDate" class="form-control" />
+            <span asp-validation-for="ReturnDate" class="text-danger"></span>
+
+        </div>
+     
+        <div class="row">
+            <div class="col-6">
+                <button type="submit" class="btn btn-outline-primary form-control">Ödünç Al</button>
+            </div>
+            <div class="col-6">
+                <a asp-controller="Book" asp-action="Index" class="btn btn-outline-secondary form-control">
+                    Kitap Listesine Geri Dön
+                </a>
+            </div>
+        </div>
+    </div>
+</form>
